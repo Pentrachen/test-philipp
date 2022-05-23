@@ -1,10 +1,13 @@
-package com.tlscloud.plugin;
-
 import java.io.File;
 import java.io.IOException;
 
 public class Transform {
-	
+
+
+	public static void main(String[] args) throws Exception{
+		System.out.println(getJSONFromFile("test/students.csv", "\\,"));
+	}
+
 	public static String getJSONFromFile(String fileName, String separator)
 			throws IOException {
 		
@@ -49,7 +52,5 @@ public class Transform {
 		
 		return sb.toString();
 	}
-	public static void main(String[] args) throws Exception{
-		System.out.println(getJSONFromFile("test/students.csv", "\\,"));
-	}
+
 }
